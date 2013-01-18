@@ -1,0 +1,93 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>InstaRoulette</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	gameContainer = $('.game-container');
+	targetPicWrapper = $('#targetPicWrapper');
+	
+	
+	link = $('.choice');
+	winner = $('.winner');
+	loser = $('.loser');
+	
+	link.click(function(){
+		if ($(this).hasClass('winner')){
+			//alert('win!')
+			
+			targetPicWrapper.html('<h2>That\'s Correct! A Big Check Mark is Going to Go Here One Day!</h2>')
+			
+		}
+		else{
+			//alert('lose!')
+			targetPicWrapper.html('<h2>Imagine a Big Red \'X\'. Because That\'s What Losers See.</h2>')
+		}
+	})
+});
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34501926-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script></head>
+<body>
+<header class="header">
+<h1>Who Took This Picture?</h1>
+<a href="logout.html">log out</a>
+</header>
+
+<span class="instructions">Click the user who you think uploaded the picture on the left:</span>
+
+<div clase="game-container" class="clearfix">
+<div id="targetPicWrapper">
+<img src="http://distilleryimage8.s3.amazonaws.com/f70bbff6922611e1b9f1123138140926_7.jpg" id="targetPic" />
+</div>
+<ul id="choiceList" class="clearfix">
+	<li>
+	<a href="https://api.instagram.com/oauth/authorize/?client_id=7007dc6f7f5d4c24b783e75223c93f21&redirect_uri=http://thomasphorton.com/instagram/landing.php&response_type=code" 
+	class="choice clearfix " data-answer="dirk4123" data-guess="amandalporfilio">
+	<img src="http://images.instagram.com/profiles/profile_23309212_75sq_1329081420.jpg" class="choicePic">
+	<span class="choiceName">amandalporfilio</span>
+	</a>
+</li>
+	
+		<li>
+	<a href="https://api.instagram.com/oauth/authorize/?client_id=7007dc6f7f5d4c24b783e75223c93f21&redirect_uri=http://thomasphorton.com/instagram/landing.php&response_type=code" 
+	class="choice clearfix " data-answer="dirk4123" data-guess="kimisawesome1">
+	<img src="http://images.instagram.com/profiles/profile_2548197_75sq_1336259987.jpg" class="choicePic">
+	<span class="choiceName">kimisawesome1</span>
+	</a>
+</li>
+	
+		<li>
+	<a href="https://api.instagram.com/oauth/authorize/?client_id=7007dc6f7f5d4c24b783e75223c93f21&redirect_uri=http://thomasphorton.com/instagram/landing.php&response_type=code" 
+	class="choice clearfix winner" data-answer="dirk4123" data-guess="dirk4123">
+	<img src="http://images.instagram.com/profiles/anonymousUser.jpg" class="choicePic">
+	<span class="choiceName">dirk4123</span>
+	</a>
+</li>
+	
+	</a>
+</ul>
+
+</div><!--#gameContainer-->
+
+<footer class="footer">
+Built Using the Instagram API in PHP by <a href="http://thomasphorton.com" title="Web Developer">Thomas P Horton</a> </footer>
+</body>
+</html>

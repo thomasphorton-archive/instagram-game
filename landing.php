@@ -7,12 +7,12 @@ https://api.instagram.com/oauth/authorize/?client_id=7007dc6f7f5d4c24b783e75223c
 
 <head>
 <title>InstaRoulette</title>
-<link rel="stylesheet" type="text/css" href="styles/style.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
 <meta name="viewport" content="width=device-width; initial-scale=1.0">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-	gameContainer = $('#gameContainer');
+	gameContainer = $('.game-container');
 	targetPicWrapper = $('#targetPicWrapper');
 	
 	
@@ -37,13 +37,14 @@ $(document).ready(function(){
 <?php include 'analytics.php';?>
 </head>
 <body>
-<header>
+<header class="header">
 <h1>Who Took This Picture?</h1>
+<a href="logout.html">log out</a>
 </header>
 
 <span class="instructions">Click the user who you think uploaded the picture on the left:</span>
 
-<div id="gameContainer" class="clearfix">
+<div clase="game-container" class="clearfix">
 <? include 'the.game.php'; ?>
 </div><!--#gameContainer-->
 

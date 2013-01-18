@@ -1,0 +1,379 @@
+/*
+	Frameless			<http://framelessgrid.com/>
+	by Joni Korpi 		<http://jonikorpi.com/>
+	licensed under CC0	<http://creativecommons.org/publicdomain/zero/1.0/>
+*/
+/*
+	Margin, padding, and border resets
+	except for form elements
+*/
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+/*
+	Consistency fixes
+	adopted from http://necolas.github.com/normalize.css/
+*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+audio,
+canvas,
+video {
+  display: block;
+}
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+  min-height: 100%;
+  font-size: 100%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+b,
+strong {
+  font-weight: bold;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a img,
+img {
+  -ms-interpolation-mode: bicubic;
+  border: 0;
+}
+input,
+textarea,
+button,
+select {
+  margin: 0;
+  font-size: 100%;
+  line-height: normal;
+  vertical-align: baseline;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+textarea {
+  overflow: auto;
+}
+/*
+	These are easy to forget
+*/
+::selection {
+  background: white;
+  color: #463e36;
+}
+::-moz-selection {
+  background: white;
+  color: #463e36;
+}
+img::selection {
+  background: transparent;
+}
+img::-moz-selection {
+  background: transparent;
+}
+body {
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0.62);
+}
+/*
+	Style overrides for IE6-8
+	http://jonikorpi.com/leaving-old-IE-behind/
+*/
+/*
+	An easy way to zoom your entire layout in or out (as long as it's set in ems).
+	Just change the media queries to activate them.
+	Assuming your base font-size is 16:
+	- the first one zooms out by a factor of (16-2)/16 = 0.875
+	- the second one zooms in by a factor of (16+2)/16 = 1.125  
+*/
+@media screen and (max-width: 1px) {
+  body {
+    font-size: 0.875em;
+  }
+}
+@media screen and (max-width: 1px) {
+  body {
+    font-size: 1.125em;
+  }
+}
+@font-face {
+  font-family: 'Carton';
+  src: url('fonts/carton-slab-webfont.eot');
+  src: url('fonts/carton-slab-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/carton-slab-webfont.woff') format('woff'), url('fonts/carton-slab-webfont.ttf') format('truetype'), url('fonts/carton-slab-webfont.svg#fonts/cartonslab') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lavanderia';
+  src: url('fonts/lavanderia_regular-webfont.eot');
+  src: url('fonts/lavanderia_regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/lavanderia_regular-webfont.woff') format('woff'), url('fonts/lavanderia_regular-webfont.ttf') format('truetype'), url('fonts/lavanderia_regular-webfont.svg#lavanderia_regularregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.clearfix {
+  display: inline-block;
+}
+html[xmlns] .clearfix {
+  display: block;
+}
+* html .clearfix {
+  height: 1%;
+}
+.clearfix {
+  display: block;
+}
+* html .clearfix {
+  height: 1%;
+}
+body {
+  margin: 0px;
+  background-color: #f8eee1;
+  color: #463e36;
+  font-size: 15px;
+}
+h2 {
+  text-align: center;
+  font-family: Carton;
+}
+.header {
+  border-top: 10px solid #463e36;
+  background-color: #b7a290;
+}
+.header h1 {
+  font-size: 2em;
+  line-height: 1em;
+  text-shadow: 1px 2px 1px rgba(248, 238, 225, 0.45);
+  margin: 0.1em;
+  text-align: center;
+  font-family: Carton;
+}
+.login {
+  display: block;
+  width: 12em;
+  padding: 1.5em;
+  font-size: 2em;
+  font-family: Carton;
+  margin: 40px auto 0;
+  background-color: white;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.35);
+  color: #463e36;
+}
+.instructions {
+  width: 10em;
+  margin: 0 auto;
+  font-size: 2.4em;
+  font-family: Lavanderia;
+  line-height: 1.1em;
+  text-align: center;
+  display: block;
+}
+#targetPicWrapper {
+  text-align: center;
+}
+#targetPicWrapper img {
+  width: 15em;
+  margin: 0 auto;
+}
+#choiceList {
+  padding: 0px;
+  margin: 0 auto;
+  width: 90%;
+}
+#choiceList li {
+  list-style-type: none;
+  display: block;
+  margin: 0.5em 0;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.35);
+  padding: 0;
+  background-color: white;
+}
+#choiceList li:first-child {
+  margin-top: 0;
+}
+#choiceList li:hover {
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.75);
+}
+#choiceList li a {
+  color: black;
+  display: block;
+  text-decoration: none;
+}
+.choicePic {
+  width: 5em;
+  float: left;
+  display: inline;
+}
+.choiceName {
+  width: 12em;
+  font-size: 18px;
+  line-height: 4em;
+  float: left;
+  display: inline;
+  margin-left: 1em;
+  font-family: Carton;
+}
+.footer {
+  background-color: #463e36;
+  height: 20px;
+  font-size: 0.9em;
+  padding: 1em;
+  text-align: center;
+  color: #f8eee1;
+  font-family: Carton;
+}
+.footer a {
+  color: #f8eee1;
+  font-family: Carton;
+  margin: 12px 0;
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* Styles */
+}
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+  /* Styles */
+}
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+  /* Styles */
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Styles */
+}
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* Styles */
+}
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* Styles */
+}
+/* Non-maximized browser windows ---------- */
+@media only screen and (min-width: 768px) {
+  .header h1 {
+    font-size: 4em;
+  }
+  .instructions {
+    width: 12em;
+    padding: 0.5em;
+  }
+  .game-container {
+    width: 43.5em;
+    margin: 0 auto;
+  }
+  #targetPicWrapper {
+    text-align: left;
+    width: 25em;
+  }
+  #targetPicWrapper img {
+    width: 25em;
+    display: inline;
+  }
+  #choiceList {
+    display: inline;
+    width: 21em;
+  }
+}
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  /* Styles */
+}
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  /* Styles */
+}
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /* Styles */
+}
